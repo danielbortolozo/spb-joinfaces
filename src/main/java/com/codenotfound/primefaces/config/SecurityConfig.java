@@ -33,14 +33,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     System.out.println("senha ="+this.senha);
     auth.inMemoryAuthentication().withUser("john.doe")
         .password("{noop}1234").roles("USER").and()
-        .withUser("del").password("{noop}123").roles("ADMIN");
+        .withUser("del").password("{noop}1233").roles("ADMIN");
+
+
   }
 
-  public String getSenha() {
-    return senha;
-  }
 
-  public void setSenha(String senha) {
-    this.senha = senha;
-  }
 }
